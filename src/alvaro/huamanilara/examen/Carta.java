@@ -38,11 +38,16 @@ public class Carta {
 	}
 	
 	public void mostrarPlatoDisponibibles() {
-		System.out.println("LOS PLATOS DISPONIBLES DE LA " + this.nombre );
+		System.out.println( this.nombre.toUpperCase() );
+		System.out.println("Platos disponibles");
 		for(Plato plato:this.platos) {
 			if(plato.isDisponible()) {
 				System.out.println(plato.getNombre() + "     " + plato.getPrecio());
 			}
+		}
+		System.out.println("Bebidas disponibles");
+		for(Bebida bebida:this.bebidas) {
+			System.out.println(bebida.getNombre() + "      " + bebida.getPrecio());
 		}
 	}
 }
